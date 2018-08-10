@@ -4,9 +4,12 @@
   host = code.ac.st
 
 [user]
-  name = thad
-  email = thad@acst.com
-  #signingkey = 6FB5819C
+	name = michaell
+	email = michaell@acst.com
+  #signingkey = 3ED16A77
+
+[credential]
+  helper = /opt/boxen/bin/boxen-git-credential
 
 [color]
   diff   = auto
@@ -32,9 +35,7 @@
 
 [core]
   excludesfile = /opt/boxen/config/git/gitignore
-  # editor = atom --wait
   editor = nano
-	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [apply]
   whitespace = nowarn
@@ -53,7 +54,7 @@
   # for more information on different options of the below setting.
   #
   # Setting to git 2.0 default to surpress warning message
-  default = simple
+	default = current
 
 [alias]
   la = "!git config -l | grep alias | cut -c 7-"
@@ -125,23 +126,26 @@
   grep = grep -Ii
   gr   = grep -Ii
 
+  pullall = "!f(){ git pull \"$@\" && git submodule update --init --recursive; }; f"
+
 [github]
-  user = thad
+  user = michaellindley
 
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
   required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 
 [http]
-  cookiefile = /Users/thad/.gitcookies
+  cookiefile = /Users/michaellindley/.gitcookies
 
 [pager]
   diff = diff-so-fancy | less --tabs=1,5 -R
   show = diff-so-fancy | less --tabs=1,5 -R
 
-[diff-so-fancy]
-	stripLeadingSymbols = false
-
 [url "git@code.ac.st:"]
-  insteadOf = https://code.ac.st/
+	insteadOf = https://code.ac.st/
+
+[url "git@mesa.ac.st:"]
+	insteadOf = https://mesa.ac.st/
