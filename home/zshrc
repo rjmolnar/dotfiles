@@ -74,3 +74,8 @@ fi
 eval "$(direnv hook zsh)"
 
 test -e "~/.iterm2_shell_integration.zsh" && source "~/.iterm2_shell_integration.zsh"
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
+
+# Prefix to use when saving original versions of bound widgets
+ZSH_AUTOSUGGEST_ORIGINAL_WIDGET_PREFIX=autosuggest-orig-
