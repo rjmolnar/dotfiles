@@ -35,6 +35,8 @@ plugins=(
   vagrant
   web-search
   private-loader
+  z
+  zsh-autosuggestions
 )
 
 # add homebrew functions and completions to fpath
