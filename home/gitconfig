@@ -4,8 +4,8 @@
   host = code.ac.st
 
 [user]
-	name = michaell
-	email = michaell@acst.com
+	name = rush
+	email = russ@acst.com
   #signingkey = 3ED16A77
 
 [credential]
@@ -129,7 +129,7 @@
   pullall = "!f(){ git pull \"$@\" && git submodule update --init --recursive; }; f"
 
 [github]
-  user = michaellindley
+  user = rjmolnar
 
 [filter "lfs"]
   required = true
@@ -138,7 +138,7 @@
 	process = git-lfs filter-process
 
 [http]
-  cookiefile = /Users/michaellindley/.gitcookies
+  cookiefile = /Users/russmolnar/.gitcookies
 
 [pager]
   diff = diff-so-fancy | less --tabs=1,5 -R
